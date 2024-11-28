@@ -1,0 +1,32 @@
+static async function main(args: [string]): void { 
+    var mapTest = {
+        key1 = 'value1',
+        key2 = 'value2',
+        key3 = 'value3',
+    };
+
+    var length = mapTest.length();
+    var num = length + 3;
+    var keys = mapTest.keySet();
+    var allKey = '';
+    for(var key : keys) {
+        allKey = allKey + key;
+    }
+    var entries: [ entry[string] ] = mapTest.entries();
+    var newKey = '';
+    var newValue = '';
+    for(var e : entries) {
+        newKey = newKey + e.key();
+        newValue = newValue + e.value();
+    }
+
+    var json = mapTest.toJSON();
+    var mapTest2 = {
+      key1 = 'value4',
+      key4 = 'value5',
+    };
+    var mapTest3 = mapTest.merge(mapTest2);
+    if(mapTest3['key1'] == 'value4') {
+      return;
+    }
+}

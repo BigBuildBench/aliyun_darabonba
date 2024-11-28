@@ -1,0 +1,43 @@
+// this package is staging package, don't publish
+
+/**
+ * HmacSHA1 Signature
+ * @param stringToSign string
+ * @param secret string
+ * @return signed string
+ */
+static function HmacSHA1Sign(stringToSign: string, secret: string): string;
+
+
+/**
+ * HmacSHA256 Signature
+ * @param stringToSign string
+ * @param secret string
+ * @return signed string
+ */
+static function HmacSHA256Sign(stringToSign: string, secret: string): string;
+
+
+/**
+ * HmacSM3 Signature
+ * @param stringToSign string
+ * @param secret string
+ * @return signed string
+ */
+static function HmacSM3Sign(stringToSign: string, secret: string): string;
+
+
+/**
+ * SHA256withRSA Signature
+ * @param stringToSign string
+ * @param secret string
+ * @return signed string
+ */
+static function SHA256withRSASign(stringToSign: string, secret: string): string;
+
+/**
+ * MD5 Signature
+ * @param stringToSign string
+ * @return signed string
+ */
+static function MD5Sign(stringToSign: string): string;

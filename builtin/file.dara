@@ -1,0 +1,21 @@
+init(path: string) {}
+
+function path(): string;
+
+async function length(): integer;
+
+async function createTime(): $Date;
+
+async function modifyTime(): $Date;
+
+async function read(size: number): bytes;
+
+async function write(data: bytes): void;
+
+async function close(): void;
+
+static function createReadStream(path: string) throws: readable;
+
+static function createWriteStream(path: string) throws: writable;
+
+static async function exists(path: string): boolean;

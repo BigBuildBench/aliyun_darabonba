@@ -1,0 +1,32 @@
+{
+  "name": "@darabonba/parser",
+  "version": "2.0.8",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "eslint --fix lib test *.js",
+    "test": "mocha --inline-diffs -b -R spec test/*.test.js",
+    "test-cov": "nyc -r=html -r=text -r=lcov mocha -R spec test/*.test.js",
+    "ci": "npm run lint && npm run test-cov && codecov"
+  },
+  "author": "Jackson Tian",
+  "license": "MIT",
+  "devDependencies": {
+    "codecov": "3.1.0",
+    "eslint": "^8",
+    "expect.js": "^0.3.1",
+    "mocha": "^10",
+    "nyc": "^17"
+  },
+  "description": "",
+  "files": [
+    "bin",
+    "lib",
+    "builtin",
+    "index.js"
+  ],
+  "repository": "git@github.com:aliyun/darabonba.git"
+}
